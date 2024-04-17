@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://avatars.dzeninfra.ru/get-zen_doc/5174875/pub_6310a0370f956b039a4b3c67_63173384a836ff130e470f4c/scale_1200) center/cover no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            transition: background-color 0.3s, opacity 0.3s;
+            color: white;
+        }
+        input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm" action="/submit_registration" method="post">
+        <h2 style="color: white;">Регистрация</h2>
+        <label for="username" style="color: white;">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email" style="color: white;">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password" style="color: white;">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Ха-ха, вы заполнили форму! Но это всего лишь пранк. Ничего не отправлено.');
+            setTimeout(function() {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+            }, 1700);
+        });
+    </script>
+</body>
+</html>
