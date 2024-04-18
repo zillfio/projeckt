@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильмы 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('space.jpg') center/cover no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: opacity 0.3s;
+        }
+        nav a:hover {
+            opacity: 0.8;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 20px auto;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            transition: background-color 0.3s, opacity 0.3s;
+            color: white;
+        }
+        input[type="text"]:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .movie {
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            width: 300px;
+        }
+        .movie:hover {
+            transform: translateY(-5px);
+        }
+        .movie img {
+            width: 100%;
+            display: block;
+            border-radius: 10px 10px 0 0;
+        }
+        .movie-content {
+            padding: 20px;
+        }
+        .movie h2 {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+        .movie p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: white;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .big-button {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            text-decoration: none;
+        }
+        .big-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Фильмы 2024</div>
+        <nav>
+            <a href="#">Главная</a>
+            <a href="#">Фильмы</a>
+            <a href="#">О нас</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </header>
+
+    <form id="searchForm" action="#" method="get">
+        <input type="text" id="searchInput" name="search" placeholder="Поиск фильмов...">
+    </form>
+
+    <div class="movies-container">
+        <div class="movie">
+            <img src="movie1.jpg" alt="Фильм 1">
+            <div class="movie-content">
+                <h2>Название фильма 1</h2>
+                <p>Описание фильма 1</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <!-- Добавьте еще блоки .movie для других фильмов -->
+        <div class="movie">
+            <img src="movie2.jpg" alt="Фильм 2">
+            <div class="movie-content">
+                <h2>Название фильма 2</h2>
+                <p>Описание фильма 2</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie3.jpg" alt="Фильм 3">
+            <div class="movie-content">
+                <h2>Название фильма 3</h2>
+                <p>Описание фильма 3</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie4.jpg" alt="Фильм 4">
+            <div class="movie-content">
+                <h2>Название фильма 4</h2>
+                <p>Описание фильма 4</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie5.jpg" alt="Фильм 5">
+            <div class="movie-content">
+                <h2>Название фильма 5</h2>
+                <p>Описание фильма 5</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie6.jpg" alt="Фильм 6">
+            <div class="movie-content">
+                <h2>Название фильма 6</h2>
+                <p>Описание фильма 6</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie7.jpg" alt="Фильм 7">
+            <div class="movie-content">
+                <h2>Название фильма 7</h2>
+                <p>Описание фильма 7</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie8.jpg" alt="Фильм 8">
+            <div class="movie-content">
+                <h2>Название фильма 8</h2>
+                <p>Описание фильма 8</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie9.jpg" alt="Фильм 9">
+            <div class="movie-content">
+                <h2>Название фильма 9</h2>
+                <p>Описание фильма 9</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="movie10.jpg" alt="Фильм 10">
+            <div class="movie-content">
+                <h2>Название фильма 10</h2>
+                <p>Описание фильма 10</p>
+                <button class="big-button">Смотреть</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Обработчик событий для кнопок фильмов
+        var movieButtons = document.querySelectorAll('.big-button');
+        movieButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Рикрол
+            });
+        });
+    </script>
+</body>
+</html>
